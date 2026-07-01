@@ -7,8 +7,15 @@ DEBUG = False
 # Required in production — no default, so a missing env var fails loudly.
 SECRET_KEY = env("SECRET_KEY")  # noqa: F405
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")  # noqa: F405
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])  # noqa: F405
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])  # noqa: F405
+
+# Render injects the assigned hostname — always trust it, so the app works
+# regardless of the onrender.com subdomain suffix.
+RENDER_EXTERNAL_HOSTNAME = env("RENDER_EXTERNAL_HOSTNAME", default="")  # noqa: F405
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+    CSRF_TRUSTED_ORIGINS.append(f"https://{RENDER_EXTERNAL_HOSTNAME}")
 
 # Postgres via DATABASE_URL, e.g. postgres://user:pass@host:5432/dbname
 DATABASES = {"default": env.db("DATABASE_URL")}  # noqa: F405
