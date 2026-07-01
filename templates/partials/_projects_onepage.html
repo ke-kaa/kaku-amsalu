@@ -1,0 +1,23 @@
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="label"><span class="num">05</span>Selected Work</div>
+  <div>
+    <h2>Recent projects.</h2>
+    <div class="projects">
+      {% for p in projects %}
+      <article class="project">
+        <div class="pn">{{ p.number_label }}</div>
+        <div class="col-title">
+          <h3>{{ p.title }}</h3>
+          <div class="role">{{ p.role_label }}</div>
+        </div>
+        <div class="col-desc">
+          <p>{{ p.description_short }}</p>
+          <div class="tags">{% for t in p.tags.all %}<span>{{ t.label }}</span>{% endfor %}</div>
+        </div>
+        <div class="yr">{{ p.year }}</div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<!-- RESUME -->
+<section id="resume">
+  <div class="label"><span class="num">03</span>Resume</div>
+  <div>
+    <h2>A summary of my path.</h2>
+    <div class="resume-cols">
+      <div>
+        <h3 class="col-title">Education</h3>
+        {% for e in education %}
+        <div class="entry">
+          <div class="yr">{{ e.year_label }}</div>
+          <div>
+            <h4>{{ e.title }}</h4>
+            <div class="org">{{ e.organization }}</div>
+            <p>{{ e.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div>
+        <h3 class="col-title">Experience</h3>
+        {% for x in experience %}
+        <div class="entry">
+          <div class="yr">{{ x.code_label }}</div>
+          <div>
+            <h4>{{ x.title }}</h4>
+            <div class="org">{{ x.stack_label }}</div>
+            <p>{{ x.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

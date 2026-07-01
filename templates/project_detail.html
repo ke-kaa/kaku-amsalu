@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{# PLACEHOLDER — future case-study page (master plan §2.5). #}
+
+{% block title %}{{ project.title }} — {{ site.site_title }}{% endblock %}
+
+{% block content %}
+<article>
+  <p><a href="{% url 'one_page' %}">← back</a></p>
+  <h1>{{ project.title }}</h1>
+  <p>{{ project.role_label }} · {{ project.year }}</p>
+  {% for t in project.tags.all %}<span>{{ t.label }}</span>{% endfor %}
+  <div>{{ project.description_long|safe }}</div>
+  {% if project.live_url %}<a href="{{ project.live_url }}">Live</a>{% endif %}
+  {% if project.repo_url %}<a href="{{ project.repo_url }}">Repo</a>{% endif %}
+  {% for g in project.gallery.all %}<figure><img src="{{ g.image.url }}" alt="{{ g.caption }}"><figcaption>{{ g.caption }}</figcaption></figure>{% endfor %}
+</article>
+{% endblock %}

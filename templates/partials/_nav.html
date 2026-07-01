@@ -1,0 +1,8 @@
+<!-- TOP -->
+<div class="top">
+  <span>{{ site.owner_initials }} — Portfolio / {{ site.portfolio_year }}</span>
+  <div class="right">
+    {% for n in nav_links %}<a href="{{ n.anchor|default:n.external_url }}">{{ n.label }}</a>{% endfor %}
+    <a href="{% url 'cinematic' %}">{{ site.cinematic_url_label }}</a>
+  </div>
+</div>

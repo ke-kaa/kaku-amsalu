@@ -1,0 +1,84 @@
+Watching for file changes with StatReloader
+[01/Jul/2026 11:15:54] "GET / HTTP/1.1" 200 14181
+[01/Jul/2026 11:15:54] "GET /static/css/one_page.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[01/Jul/2026 11:15:54] "GET /favicon.ico HTTP/1.1" 404 3421
+[01/Jul/2026 11:16:09] "GET / HTTP/1.1" 200 14181
+/home/kaku/Documents/PersonalProjects/kaku_portfolio/.venv/lib/python3.12/site-packages/admin_interface/templatetags/admin_interface_tags.py:30: UserWarning: Language chooser requires 'django.middleware.locale.LocaleMiddleware' in your MIDDLEWARE to work.
+  warnings.warn(
+[01/Jul/2026 11:16:10] "GET /admin/ HTTP/1.1" 200 30929
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/change-form.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1204
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/changelist.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1913
+[01/Jul/2026 11:16:10] "GET /static/admin/css/base.css HTTP/1.1" 200 23100
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/fieldsets.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 499
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/admin-interface.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 19912
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/file-upload.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1169
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/header.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1101
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/inlines.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 2771
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/jquery.ui.tabs.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 5481
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/list-filter.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1054
+[01/Jul/2026 11:16:10] "GET /static/admin_interface/css/language-chooser.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1734
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/list-filter-dropdown.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 785
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/login.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1240
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/modules.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 479
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/nav-sidebar.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 2377
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/object-tools.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 910
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/paginator.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1022
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/rtl.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1227
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/sticky-form-controls.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 2957
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/tabbed-changeform.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 2013
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/import-export.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 189
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/ckeditor.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 2720
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/widgets.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 5907
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/json-widget.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 993
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/modeltranslation.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 356
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/rangefilter.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1238
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/sorl-thumbnail.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1451
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/tinymce.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 78
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/css/third-party/streamfield.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 6407
+[01/Jul/2026 11:16:11] "GET /static/admin/css/responsive.css HTTP/1.1" 200 16273
+[01/Jul/2026 11:16:11] "GET /static/admin/css/responsive.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 16273
+[01/Jul/2026 11:16:11] "GET /static/admin/css/responsive_rtl.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 2157
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/foldable-apps/foldable-apps.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1955
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/related-modal/related-modal.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 2888
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/magnific-popup/magnific-popup.css?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 6951
+[01/Jul/2026 11:16:11] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 3538
+[01/Jul/2026 11:16:11] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[01/Jul/2026 11:16:11] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/foldable-apps/foldable-apps.js?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 1750
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/related-modal/related-modal.js?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 7195
+[01/Jul/2026 11:16:11] "GET /static/admin_interface/magnific-popup/jquery.magnific-popup.js?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 60830
+[01/Jul/2026 11:16:11] "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[01/Jul/2026 11:16:11] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[01/Jul/2026 11:16:11] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 593
+[01/Jul/2026 11:16:11] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 978
+[01/Jul/2026 11:16:19] "GET /admin/core/navlink/ HTTP/1.1" 200 36645
+[01/Jul/2026 11:16:19] "GET /static/admin/css/changelists.css HTTP/1.1" 200 7498
+[01/Jul/2026 11:16:19] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[01/Jul/2026 11:16:19] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[01/Jul/2026 11:16:19] "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[01/Jul/2026 11:16:19] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[01/Jul/2026 11:16:19] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[01/Jul/2026 11:16:19] "GET /static/admin/js/actions.js HTTP/1.1" 200 8077
+[01/Jul/2026 11:16:19] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[01/Jul/2026 11:16:19] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[01/Jul/2026 11:16:19] "GET /static/admin_interface/dropdown-filter/dropdown-filter.js?v=fbf73b4c3a05e7b27c0ed71177534234cb431fc7becc666773c1f652 HTTP/1.1" 200 401
+[01/Jul/2026 11:16:19] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[01/Jul/2026 11:16:19] "GET /static/ordered_model/arrow-top.gif HTTP/1.1" 200 841
+[01/Jul/2026 11:16:19] "GET /static/admin/img/search.svg HTTP/1.1" 200 607
+[01/Jul/2026 11:16:20] "GET /static/ordered_model/arrow-down.gif HTTP/1.1" 200 80
+[01/Jul/2026 11:16:20] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[01/Jul/2026 11:16:20] "GET /static/ordered_model/arrow-up.gif HTTP/1.1" 200 838
+[01/Jul/2026 11:16:20] "GET /static/ordered_model/arrow-bottom.gif HTTP/1.1" 200 80
+[01/Jul/2026 11:16:20] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 593
+[01/Jul/2026 11:16:20] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 928
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 01, 2026 - 11:15:34
+Django version 6.0.6, using settings 'kaku_portfolio.settings.dev'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/

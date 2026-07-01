@@ -1,0 +1,65 @@
+<!-- 11 CONTACT -->
+<section class="panel p-contact" data-label="Contact" data-num="11">
+  <div class="top reveal">
+    <h2 class="kinetic">{{ contact.heading }}</h2>
+    <div class="lead">{{ contact.cinematic_lead|safe }}</div>
+  </div>
+  <div class="body">
+    <div class="reveal reveal-2">
+      <p>{{ contact.lead_text }}</p>
+      <div class="channels">
+        {% for c in contact_channels %}
+          {% if c.is_clickable and c.href %}
+          <a href="{{ c.href }}">
+            <span class="label">{{ c.label }}</span>
+            <span class="val">{{ c.value }} →</span>
+          </a>
+          {% else %}
+          <div>
+            <span class="label">{{ c.label }}</span>
+            <span class="val">{{ c.value }}</span>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="reveal reveal-3">
+      {% if request.GET.sent %}
+      <p class="form-success">Thanks — your message has been sent. I'll be in touch.</p>
+      {% endif %}
+      <form class="contact-form" method="post" action="{% url 'contact_submit' %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}" />
+        {{ contact_form.website }}
+        {% if contact_form.non_field_errors %}<div class="form-errors">{{ contact_form.non_field_errors }}</div>{% endif %}
+        <div class="form-grid">
+          <label>
+            <span>Name</span>
+            {{ contact_form.name }}
+            {{ contact_form.name.errors }}
+          </label>
+          <label>
+            <span>Email</span>
+            {{ contact_form.email }}
+            {{ contact_form.email.errors }}
+          </label>
+        </div>
+        <label>
+          <span>Subject</span>
+          {{ contact_form.subject }}
+          {{ contact_form.subject.errors }}
+        </label>
+        <label>
+          <span>Message</span>
+          {{ contact_form.message }}
+          {{ contact_form.message.errors }}
+        </label>
+        <button type="submit">Send message →</button>
+      </form>
+    </div>
+  </div>
+  <div class="footnote reveal reveal-4">
+    <span>{% if site.copyright_text %}{{ site.copyright_text }}{% else %}© {{ current_year }} {{ site.owner_name }} — All rights reserved.{% endif %}</span>
+    <span>{{ site.footer_quip }}</span>
+  </div>
+</section>

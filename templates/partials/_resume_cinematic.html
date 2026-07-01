@@ -1,0 +1,41 @@
+<!-- 03 RESUME -->
+<section class="panel p-resume" data-label="Resume" data-num="03">
+  <div class="head reveal">
+    <h2 class="kinetic">A summary<br/>of my resume.</h2>
+    <div class="lead">
+      Education / Experience<br/>
+      2022 — Present
+      {% if education|length > 4 or experience|length > 4 %}
+      <br/><a class="more-link" href="{% url 'one_page' %}#resume">Full résumé →</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="cols">
+    <div class="reveal reveal-2">
+      <div class="col-title">Education</div>
+      {% for e in education|slice:":4" %}
+      <div class="entry">
+        <div class="yr">{{ e.year_label }}</div>
+        <div>
+          <h3>{{ e.title }}</h3>
+          <div class="org">{{ e.organization }}</div>
+          <p>{{ e.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="reveal reveal-3">
+      <div class="col-title">Experience</div>
+      {% for x in experience|slice:":4" %}
+      <div class="entry">
+        <div class="yr">{{ x.code_label }}</div>
+        <div>
+          <h3>{{ x.title }}</h3>
+          <div class="org">{{ x.stack_label }}</div>
+          <p>{{ x.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ site.owner_name }}{% endblock %}
+
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/cinematic.css' %}" />{% endblock %}
+
+{% block content %}
+{% include "partials/_hud.html" %}
+
+<!-- ─── HORIZONTAL TRACK ──────────────────────────────────── -->
+<main class="track" id="track">
+  {% include "partials/_intro.html" %}
+  {% include "partials/_about_cinematic.html" %}
+  {% include "partials/_services_cinematic.html" %}
+  {% include "partials/_resume_cinematic.html" %}
+  {% include "partials/_skills_ticker.html" %}
+  {% include "partials/_works_divider.html" %}
+  {% for p in projects %}{% include "partials/_project_panel.html" %}{% endfor %}
+  {% include "partials/_contact_cinematic.html" %}
+</main>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'js/cinematic.js' %}"></script>{% endblock %}

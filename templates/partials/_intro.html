@@ -1,0 +1,16 @@
+<!-- 00 INTRO -->
+<section class="panel p-intro" data-label="Origin" data-num="00">
+  <div class="reveal eyebrow"><span class="line"></span>{{ hero.eyebrow_text }}</div>
+  <h1 class="kinetic reveal reveal-2">
+    <div class="h1-row">{{ hero.first_name|upper }}</div>
+    <div class="h1-row">{{ hero.last_name|upper }}<span class="slash kinetic alt">/</span></div>
+  </h1>
+  <div class="role-strip reveal reveal-3">
+    <div class="role">{{ hero.role_strip_role }}</div>
+    <div class="meta">
+      Status — {{ hero.meta_status }}<br/>
+      Domain — {{ hero.meta_domain }}<br/>
+      Location — {{ hero.meta_location }}
+    </div>
+  </div>
+</section>

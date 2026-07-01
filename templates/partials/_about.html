@@ -1,0 +1,17 @@
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="label"><span class="num">01</span>About</div>
+  <div>
+    <h2>{{ about.heading }}</h2>
+    {{ about.paragraph_1|safe }}
+    {{ about.paragraph_2|safe }}
+    <dl class="facts">
+      {% for f in about.facts.all %}
+      <div>
+        <dt>{{ f.label }}</dt>
+        <dd>{% if f.is_link %}<a href="{{ f.link_url }}">{{ f.value }}</a>{% else %}{{ f.value }}{% endif %}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>

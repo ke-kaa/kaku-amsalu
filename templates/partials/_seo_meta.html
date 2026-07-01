@@ -1,0 +1,7 @@
+{% if seo.meta_description %}<meta name="description" content="{{ seo.meta_description }}" />{% endif %}
+{% if seo.keywords %}<meta name="keywords" content="{{ seo.keywords }}" />{% endif %}
+<meta property="og:title" content="{{ seo.meta_title|default:site.site_title }}" />
+{% if seo.meta_description %}<meta property="og:description" content="{{ seo.meta_description }}" />{% endif %}
+{% if seo.og_image %}<meta property="og:image" content="{{ seo.og_image.url }}" />{% endif %}
+{% if seo.twitter_handle %}<meta name="twitter:site" content="{{ seo.twitter_handle }}" />{% endif %}
+{% if seo.canonical_url %}<link rel="canonical" href="{{ seo.canonical_url }}" />{% endif %}

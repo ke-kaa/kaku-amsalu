@@ -1,0 +1,10 @@
+<!-- HERO -->
+<header class="hero">
+  <div>
+    <h1>{{ hero.first_name }}<br /><span class="thin">{{ hero.last_name }}.</span></h1>
+    <div class="badges">
+      {% for b in hero.badges.all %}{% if b.is_active %}<span class="badge">{{ b.label }}</span>{% endif %}{% endfor %}
+    </div>
+  </div>
+  <p class="lede">{{ hero.lede|safe }}</p>
+</header>

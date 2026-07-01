@@ -1,0 +1,19 @@
+[project]
+name = "kaku-portfolio"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.0.6",
+    "django-admin-interface>=0.32.0",
+    "django-cors-headers>=4.9.0",
+    "django-environ>=0.13.0",
+    "django-imagekit>=6.1.0",
+    "django-ordered-model>=3.7.4",
+    "django-solo>=2.5.1",
+    "django-tinymce>=5.0.0",
+    "djangorestframework>=3.17.1",
+    "psycopg>=3.3.4",
+    "whitenoise>=6.12.0",
+]

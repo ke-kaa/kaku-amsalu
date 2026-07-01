@@ -1,0 +1,23 @@
+<!-- 02 SERVICES -->
+<section class="panel p-services" data-label="Practice" data-num="02">
+  <div class="head reveal">
+    <h2 class="kinetic">How I bring<br/>your vision to life.</h2>
+    <div class="lead">
+      Four practices.<br/>
+      One discipline.<br/>
+      Cross-cut by intent.
+    </div>
+  </div>
+  <div class="grid">
+    {% for s in services %}
+    <div class="item reveal {% if forloop.counter <= 2 %}reveal-2{% else %}reveal-3{% endif %}">
+      <div>
+        <div class="num">{{ s.number_label }}</div>
+        <h3>{{ s.title_break|default:s.title|safe }}</h3>
+        <p>{{ s.description }}</p>
+      </div>
+      <div class="num">{{ s.stack_label }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

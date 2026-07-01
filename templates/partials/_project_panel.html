@@ -1,0 +1,18 @@
+<!-- PROJECT PANEL -->
+<section class="panel p-project" data-label="{{ p.title }}" data-num="{{ p.number_label }}">
+  <div class="top-meta">
+    <div><span>Project / {{ p.project_number|stringformat:"02d" }}</span><span>{{ p.year }}</span></div>
+    <div><span>{{ p.category }}</span></div>
+  </div>
+  <div class="frame frame-{{ p.frame_variant|lower }}">
+    {% include "projects/frames/"|add:p.frame_variant|lower|add:".html" %}
+    <div class="frame-num">{{ p.number_label }}</div>
+    <div class="frame-tag">{{ p.frame_tag }}</div>
+    <div class="frame-title kinetic">{{ p.title_break|default:p.title|safe }}</div>
+    <div class="frame-foot"><span>{{ p.frame_subtitle }}</span><span>{{ p.version_label }}</span></div>
+  </div>
+  <div class="bot-meta">
+    <div class="left">{{ p.description_short|safe }}</div>
+    <div class="right">{% for t in p.tags.all %}<span>{{ t.label }}</span>{% endfor %}</div>
+  </div>
+</section>

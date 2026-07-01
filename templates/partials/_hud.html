@@ -1,0 +1,35 @@
+<!-- ─── PERSISTENT HUD ────────────────────────────────────── -->
+<div class="hud" aria-hidden="true">
+  <div class="mark">{{ hero.first_name|upper }}<span>{{ hero.last_name|upper }}</span></div>
+  <div class="clock" id="clock">EAT — 00:00</div>
+</div>
+
+<button class="index-btn" id="indexBtn" aria-label="Open index">
+  <span class="dot"></span>Index
+</button>
+
+<div class="counter" aria-hidden="true">
+  <span id="counter">00 / 00</span>
+  <span class="bar" id="progressBar"></span>
+</div>
+
+<button class="prev-arrow" id="prevBtn" aria-label="Previous">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4 L7 12 L15 20"/><path d="M7 12 H22"/></svg>
+</button>
+<button class="next-arrow" id="nextBtn" aria-label="Next">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 4 L17 12 L9 20"/><path d="M17 12 H2"/></svg>
+</button>
+
+<!-- ─── INDEX OVERLAY ─────────────────────────────────────── -->
+<div class="overlay" id="overlay" role="dialog" aria-label="Index">
+  <button class="overlay-close" id="overlayClose">Close ✕</button>
+  <div class="overlay-head">
+    <span>Index — All Sections</span>
+    <span>{{ site.owner_initials }} / {{ site.portfolio_year }}</span>
+  </div>
+  <nav class="overlay-list" id="overlayList"></nav>
+  <div class="overlay-head" style="border-top:1px solid var(--hair); border-bottom:none; padding-top:24px;">
+    <span>Use ← → keys, scroll, or click to navigate</span>
+    <span>Esc to dismiss</span>
+  </div>
+</div>

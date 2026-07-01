@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ site.owner_name }}{% endblock %}
+
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/one_page.css' %}" />{% endblock %}
+
+{% block content %}
+<div class="page">
+  {% include "partials/_nav.html" %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/_about.html" %}
+  {% include "partials/_services.html" %}
+  {% include "partials/_resume.html" %}
+  {% include "partials/_skills.html" %}
+  {% include "partials/_projects_onepage.html" %}
+  {% include "partials/_contact.html" %}
+  {% include "partials/_footer.html" %}
+</div>
+{% endblock %}

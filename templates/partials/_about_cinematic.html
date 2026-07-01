@@ -1,0 +1,18 @@
+<!-- 01 ABOUT -->
+<section class="panel p-about" data-label="About" data-num="01">
+  <div class="col-l">
+    <h2 class="kinetic reveal">
+      <small>01 — About</small>
+      {{ about.heading }}
+    </h2>
+  </div>
+  <div class="col-r">
+    <div class="reveal reveal-2">{{ about.paragraph_cinematic_1|safe }}</div>
+    <div class="reveal reveal-3" style="margin-top:18px;">{{ about.paragraph_cinematic_2|safe }}</div>
+    <dl class="facts reveal reveal-4">
+      {% for f in about.facts.all %}
+      <div><dt>{{ f.label }}</dt><dd>{% if f.is_link %}<a href="{{ f.link_url }}">{{ f.value }}</a>{% else %}{{ f.value }}{% endif %}</dd></div>
+      {% endfor %}
+    </dl>
+  </div>
+</section>

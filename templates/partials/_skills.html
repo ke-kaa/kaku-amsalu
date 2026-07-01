@@ -1,0 +1,15 @@
+<!-- SKILLS -->
+<section id="skills">
+  <div class="label"><span class="num">04</span>Skills</div>
+  <div>
+    <h2>The tools I work with.</h2>
+    <div class="skill-groups">
+      {% for g in skill_groups %}
+      <div>
+        <h4>{{ g.name }}</h4>
+        <ul>{% for sk in g.skills.all %}<li>{{ sk.name }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

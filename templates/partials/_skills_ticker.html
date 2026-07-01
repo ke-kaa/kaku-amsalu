@@ -1,0 +1,19 @@
+<!-- 04 SKILLS -->
+<section class="panel p-skills" data-label="Skills" data-num="04">
+  <h2 class="kinetic reveal">
+    <small>04 — Skills</small>
+    The tools<br/>I work with.
+  </h2>
+  <div class="ticker reveal reveal-2">
+    <div class="ticker-row">
+      {% for sk in ticker_row1 %}<span>{{ sk.display_label|default:sk.name|upper }}</span><div class="sep"></div>{% endfor %}
+      {% for sk in ticker_row1 %}<span>{{ sk.display_label|default:sk.name|upper }}</span><div class="sep"></div>{% endfor %}
+    </div>
+  </div>
+  <div class="ticker reveal reveal-3">
+    <div class="ticker-row">
+      {% for sk in ticker_row2 %}<span>{{ sk.display_label|default:sk.name|upper }}</span><div class="sep"></div>{% endfor %}
+      {% for sk in ticker_row2 %}<span>{{ sk.display_label|default:sk.name|upper }}</span><div class="sep"></div>{% endfor %}
+    </div>
+  </div>
+</section>

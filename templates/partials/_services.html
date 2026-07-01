@@ -1,0 +1,17 @@
+<!-- SERVICES -->
+<section id="services">
+  <div class="label"><span class="num">02</span>Services</div>
+  <div>
+    <h2>How I bring vision to life.</h2>
+    <div class="services-grid">
+      {% for s in services %}
+      <div class="item">
+        <div class="num">{{ s.number_label }}</div>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.description }}</p>
+        <div class="stack">{{ s.stack_label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
