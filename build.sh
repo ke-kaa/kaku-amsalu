@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
-set -o exiterror
+set -euo pipefail
 
-uv sync --clean --verbose --no-optional --no-dev --no-bin-links --no-lockfile --no-save && \
-uv run python manage.py collectstatic --noinput --settings=kaku_portfolio.settings.prod  && \
-uv run python manage.py migrate --noinput --settings=kaku_portfolio.settings.prod
+export DJANGO_SETTINGS_MODULE=kaku_portfolio.settings.prod
 
+# Render's Python runtime doesn't ship uv when a custom build command is used.
+command -v uv >/dev/null 2>&1 || pip install --quiet uv
+
+uv sync --frozen --no-dev
+uv run python manage.py collectstatic --noinput
+uv run python manage.py migrate --noinput

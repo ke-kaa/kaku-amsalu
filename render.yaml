@@ -1,0 +1,27 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: kaku-portfolio
+    runtime: python
+    plan: free
+    branch: main
+    buildCommand: "./build.sh"
+    startCommand: "uv run gunicorn kaku_portfolio.wsgi:application --bind 0.0.0.0:$PORT --workers 3 --threads 2"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: kaku_portfolio.settings.prod
+      - key: PYTHON_VERSION
+        value: "3.12.8"
+      - key: SECRET_KEY
+        generateValue: true          # Render generates a strong secret
+      - key: DATABASE_URL
+        sync: false                   # external Aiven Postgres — set in the dashboard
+      - key: ALLOWED_HOSTS
+        sync: false                   # set to e.g. kaku-portfolio.onrender.com
+      - key: CSRF_TRUSTED_ORIGINS
+        sync: false                   # set to e.g. https://kaku-portfolio.onrender.com
+      - key: DEFAULT_FROM_EMAIL
+        sync: false
+      - key: CONTACT_EMAIL
+        sync: false
